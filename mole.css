@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("./mario-bg.png") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+#board {
+    width: 90vw; /* Responsive width */
+    height: 90vw; /* Responsive height */
+    max-width: 540px; /* Limit maximum width */
+    max-height: 540px; /* Limit maximum height */
+    margin: 20px 0; /* Center the board and add spacing */
+    display: flex;
+    flex-wrap: wrap;
+    background: url("./soil.png");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+    position: relative;
+}
+
+#board div {
+    width: 33.33%; /* Divide into 3x3 grid */
+    height: 33.33%; /* Maintain aspect ratio */
+    background-image: url("./pipe.png");
+    background-size: cover;
+    box-sizing: border-box; /* Include border in width and height calculation */
+}
+
+#board div img {
+    width: 50%; /* Scale images to fit inside tiles */
+    height: auto; /* Maintain aspect ratio of images */
+    max-width: 100px; /* Limit maximum size of images */
+    max-height: 100px; /* Limit maximum size of images */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#tryAgain {
+    display: none; /* Initially hidden */
+}
+
+/* Additional Media Queries for better responsiveness */
+@media (max-width: 600px) {
+    #board {
+        width: 80vw; /* Adjust width for smaller screens */
+        height: 80vw; /* Adjust height for smaller screens */
+    }
+    
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    #board {
+        width: 90vw; /* Further adjust width for very small screens */
+        height: 90vw; /* Further adjust height for very small screens */
+    }
+    
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

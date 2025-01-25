@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the rat</title>
+    <link rel="stylesheet" href="mole.css">
+    <script src="mole.js" defer></script>
+</head>
+<body>
+    <h1>HELP US TO CATCH THE RAT</h1>
+    <!--<h2 id="score">0</h2>-->
+    <h2 id="score">Score: 0 | Lives: 3</h2> <!-- Display Score and Lives -->
+    <!-- 3x3 grid for the game board -->
+    <div id="board"></div>
+
+    <!-- Audio Elements -->
+    <audio id="plantClickSound" src="./plant-click.mp3.wav"></audio>
+    <audio id="gameOverSound" src="./game-over.mp3"></audio>
+    <audio id="backgroundMusic" src="./background-music.mp3" loop></audio> <!-- Background Music -->
+
+    <!-- Start Game Button -->
+    <button id="startGame">Start Game</button>
+
+    <!-- Try Again Button -->
+    <button id="tryAgain" style="display: none;">Try Again</button>
+</body>
+</html>
